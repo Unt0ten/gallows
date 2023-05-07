@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "gallows"
 version = "0.1.0"
-description = ""
+description = "Classic childhood game 'guess the word'"
 authors = ["Alexandr Sakhatov <sakhatoff@gmail.com>"]
 readme = "README.md"
 packages = [
