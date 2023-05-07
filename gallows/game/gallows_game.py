@@ -178,7 +178,8 @@ def display_hangman(tries):
 
 
 def play(word):
-    word_completion = '_' * len(word)  # строка, содержащая символы _ на каждую букву задуманного слова
+    # строка, содержащая символы _ на каждую букву задуманного слова
+    word_completion = '_' * len(word)
     list_word = list(word_completion)
     guessed_letters = []  # список уже названных букв
     guessed_words = []  # список уже названных слов

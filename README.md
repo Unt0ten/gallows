@@ -1,0 +1,1 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/66f116fc556a1b81f3e2/maintainability)](https://codeclimate.com/github/Unt0ten/gallows/maintainability)
