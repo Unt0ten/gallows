@@ -1,11 +1,4 @@
-from random import choice
-from gallows.database.list_of_used_words import word_list
 from gallows.database.display_hangman import display_hangman
-
-
-def get_word():
-    word = choice(word_list)
-    return word.lower()
 
 
 def play(word):
@@ -16,12 +9,12 @@ def play(word):
     guessed_words = []  # список уже названных слов
     tries = 8  # количество попыток
 
-    print('Давайте играть в угадайку слов!')
-    print(f'Колличество попыток - {tries}')
-    print(display_hangman(tries))
+    print(f'Давайте играть в угадайку слов!' '\n'
+          f'Колличество попыток - {tries}'
+          f'{display_hangman(tries)}')
     print(word[0] + word_completion[1:-1] + word[-1])
 
-    while tries != 0:
+    for _ in range(tries):
         print(word)
         user_input = input('Введите слово или букву  ').lower()
         if not user_input.isalpha():
@@ -63,11 +56,3 @@ def play(word):
         if tries == 0:
             print(display_hangman(tries))
             print(f'Правильное слово {word.upper()}')
-
-    yes = 'да'
-    no = 'нет'
-    game_replay = input(f'Хотите сыграть еще раз? {yes}/{no}  ')
-    if game_replay == yes:
-        play(get_word())
-    elif game_replay == no:
-        exit()

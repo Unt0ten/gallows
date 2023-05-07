@@ -1,7 +1,8 @@
 .venv/
 .venv
+gallows/database/__pycache__
 gallows/scripts/__pycache__
-gallows/games/__pycache__
+gallows/game/__pycache__
 gallows/__pycache__
 /dist/
 dist/*
