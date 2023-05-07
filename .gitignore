@@ -1,0 +1,8 @@
+.venv/
+.venv
+gallows/scripts/__pycache__
+gallows/games/__pycache__
+gallows/__pycache__
+/dist/
+dist/*
+dist/gallows-0.1.0-py3-none-any.whl

@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gallows"
+version = "0.1.0"
+description = ""
+authors = ["Alexandr Sakhatov <sakhatoff@gmail.com>"]
+readme = "README.md"
+packages = [
+  { include = "gallows" },
+]
+
+[tool.poetry.scripts]
+gallows = "gallows.scripts.gallows_scripts:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
