@@ -15,7 +15,6 @@ def play(word):
     print(word[0] + word_completion[1:-1] + word[-1])
 
     for _ in range(tries):
-        print(word)
         user_input = input('Введите слово или букву  ').lower()
         if not user_input.isalpha():
             print('Вы ошиблись, попробуйте еще раз!')
