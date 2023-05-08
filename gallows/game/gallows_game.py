@@ -1,5 +1,5 @@
 from gallows.database.display_hangman import display_hangman
-
+from gallows.game.game_functionality import get_word
 
 def play(word):
     # строка, содержащая символы _ на каждую букву задуманного слова
@@ -14,7 +14,7 @@ def play(word):
           f'{display_hangman(tries)}')
     print(word[0] + word_completion[1:-1] + word[-1])
 
-    while tries != 0:
+    while tries > 0:
         user_input = input('Введите слово или букву  ').lower()
         if not user_input.isalpha():
             print('Вы ошиблись, попробуйте еще раз!')
@@ -57,3 +57,15 @@ def play(word):
         if tries == 0:
             print(display_hangman(tries))
             print(f'Правильное слово {word.upper()}')
+    yes = 'да'
+    no = 'нет'
+    while True:
+        game_replay = input(f'Хотите сыграть еще раз? {yes}/{no}  ')
+        if game_replay == yes:
+            play(get_word())
+        elif game_replay == no:
+            exit()
+        else:
+            print(f'Пожалуйста, введите {yes}/{no}!')
+            continue
+

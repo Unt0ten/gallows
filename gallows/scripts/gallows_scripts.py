@@ -7,7 +7,6 @@ from gallows.game.game_functionality import end_game
 
 def main():
     play(get_word())
-    end_game(play)
 
 
 if __name__ == '__main__':
